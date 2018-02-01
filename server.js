@@ -20,7 +20,7 @@ app.get('/api/phonenumbers/parse/text/:phoneNumber', function(request, response)
     }
 });
 
-//Manage the POST request
+// Manage the POST request
 app.post('/api/phonenumbers/parse/file', upload.single('file'), function(request, response) {
     if(!request.file) {
         response.status(400).json('No file attached!');
