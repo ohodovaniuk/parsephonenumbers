@@ -5,6 +5,10 @@ var upload = multer({dest: 'uploads/'});
 var phoneUtil = require('google-libphonenumber').PhoneNumberUtil.getInstance();
 var PNF = require('google-libphonenumber').PhoneNumberFormat;
 
+app.get('/', function(request, response) {
+    response.status(200).send('The API is up and running');
+});
+
 app.listen(8000, function() {
     console.log('The server is running on port 8000');
 });
@@ -20,7 +24,7 @@ app.get('/api/phonenumbers/parse/text/:phoneNumber', function(request, response)
     }
 });
 
-// Manage the POST request
+//Manage the POST request
 app.post('/api/phonenumbers/parse/file', upload.single('file'), function(request, response) {
     if(!request.file) {
         response.status(400).json('No file attached!');
