@@ -44,7 +44,7 @@ Now lets o the POST request. But you need to change the ```Content-Type``` to ``
 localhost:8000/api/phonenumbers/parse/file
 ```
 The responce should look like something below (it depends of the file you attach).
-![POST1](https://imgur.com/tRkKIzv)
+![POST2](https://imgur.com/tRkKIzv)
 
 
 ## Run the test file
@@ -53,4 +53,4 @@ To run the testing logic you need to shut down the nodeJS local host first. Then
 npm test
 ```
 You should receive the below output from the console:
-![POST1](https://imgur.com/pKhk1TR)
+![POST3](https://i.imgur.com/pKhk1TR)
