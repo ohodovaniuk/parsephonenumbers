@@ -5,7 +5,7 @@ This API is created to parse the phone numbers received from the link text or te
 You will need to preinstall Node.js and have access to a browser or browser simulating tool like Postman to configure the environment and do the testing.
 
 
-### Environmet Setup and Configuration
+## Environmet Setup and Configuration
 Follow the below instructions to successfully clone, configure and run the API. 
 
 First clone the parsephonenumbers repo to your local machine. Use the "Clone" button or the command below:
