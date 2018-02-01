@@ -37,14 +37,23 @@ First lets do a GET request using the link below:
 localhost:8000/api/phonenumbers/parse/text/Seneca%20Phone%20Number%3A%20416-491-5050
 ```
 Here is the result you should expect to receive from the browser as a responce:
-![POST1](https://imgur.com/a/FEe1J)
-
+```
+[
+    "+1 416-491-5050"
+]
+```
 Now lets o the POST request. But you need to change the ```Content-Type``` to ```text/plain``` and ```body``` must contain ```base64``` encoded text file.
 ```
 localhost:8000/api/phonenumbers/parse/file
 ```
 The responce should look like something below (it depends of the file you attach).
-![POST2](https://imgur.com/tRkKIzv)
+```
+[
+    "+1 647-900-9763",
+    "+1 647-677-2388",
+    "+1 416-285-9778"
+]
+```
 
 
 ## Run the test file
@@ -53,4 +62,17 @@ To run the testing logic you need to shut down the nodeJS local host first. Then
 npm test
 ```
 You should receive the below output from the console:
-![POST3](https://i.imgur.com/pKhk1TR)
+```
+The server is running on port 8000
+  API endpoint /api/phonenumbers/parse/text
+Exception:Error: The string supplied did not seem to be a phone number
+    √ No phone number received.
+    √ Correct phone number to be returned: ['+1 416-491-5050']
+
+  API endpoint /api/phonenumbers/parse/file
+    √ Correct phone numbers to be returned: ['+1 647-900-9763', '+1 647-677-2388', '+1 416-285-9778']
+
+
+  3 passing (80ms)
+```
+
