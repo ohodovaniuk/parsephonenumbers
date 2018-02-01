@@ -37,14 +37,14 @@ First lets do a GET request using the link below:
 localhost:8000/api/phonenumbers/parse/text/Seneca%20Phone%20Number%3A%20416-491-5050
 ```
 Here is the result you should expect to receive from the browser as a responce:
-![POST1](https://i.imgur.com/NOw0LGb.png)
+![POST1](https://imgur.com/a/FEe1J)
 
 Now lets o the POST request. But you need to change the ```Content-Type``` to ```text/plain``` and ```body``` must contain ```base64``` encoded text file.
 ```
 localhost:8000/api/phonenumbers/parse/file
 ```
 The responce should look like something below (it depends of the file you attach).
-![POST1](https://i.imgur.com/NOw0LGb.png)
+![POST1](https://imgur.com/tRkKIzv)
 
 
 ## Run the test file
@@ -53,4 +53,4 @@ To run the testing logic you need to shut down the nodeJS local host first. Then
 npm test
 ```
 You should receive the below output from the console:
-![POST1](https://i.imgur.com/NOw0LGb.png)
+![POST1](https://imgur.com/pKhk1TR)
