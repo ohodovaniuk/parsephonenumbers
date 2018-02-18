@@ -76,3 +76,11 @@ Exception:Error: The string supplied did not seem to be a phone number
   3 passing (80ms)
 ```
 
+
+## Linting
+Automatic linting is enabled using [ESLint](https://github.com/eslint/eslint). Rules can be found in these two files:
+
+```
+.\node_modules\eslint\conf\eslint-recommended.js
+.\.eslintrc.json (over-writes recommended rules)
+```
