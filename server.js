@@ -50,7 +50,7 @@ function parseNumbers(phoneNumbers) {
     }
     catch(err) {
         //print the exception to the logfile for security reasons
-        console.log("Exception:" + err);
+        console.log('Exception:' + err);
     }
     //Return only unique phone numbers, no duplicates
     return Array.from(new Set(parsedPhoneNumbers));
